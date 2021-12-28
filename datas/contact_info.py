@@ -7,7 +7,6 @@ class ContactInfo:
     def print_contact_info(self):
         print(f'{self.name} : {self.phone_num} - {self.memo}')
         
-    # 상세 보기 기능 - 여러줄로 나열.
     def print_contact_info_detail(self):
         print('----- 연락처 정보 상세 조회 -----')
         print(f'이름 : {self.name}')

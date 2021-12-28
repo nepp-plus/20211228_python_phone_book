@@ -13,7 +13,6 @@ while True:
     elif num == 2:
         show_all_phone_num()
     elif num == 3:
-        # 새로 추가된 remove_all 함수 실행
         remove_all()
     elif num == 4:
         search_and_view_contact()

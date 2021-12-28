@@ -40,39 +40,24 @@ def show_all_phone_num():
             
         sleep(2)
         
-# phone_book.csv 파일의 모든 내용을 삭제해주는 함수.
 def remove_all():
-    # 기존 파일을 불러내서 => 내용물 전부 삭제
-    # 파일을 새로 만들어주자. w 모드로 불러내보자.
     with open('phone_book.csv', 'w') as f:
-        pass # w모드로 불러내면 => 기존내용 삭제. 그 뒤의 일은 없다.
-    
-    # 안내 메세지 2초간 출력.
+        pass
+ 
     print('모든 연락처가 삭제되었습니다.')
     sleep(2)
     
-# 상세보기 -> 이름을 기반으로 검색. (전체 연락처 목록에서)
 def search_and_view_contact():
     print('------ 사용자 검색 ------')
     search_name = input('조회할 사용자 이름 : ')
     
-    # 모든 연락처 목록을 불러내야함. => 파일 다시 조회.
     with open('phone_book.csv', 'r') as file:
         line_list = file.readlines()
         
         for line in line_list:
             line = line.strip()
-            
-            # 실제로 해야할것 : 사용자 이름이 정말 들어있는가? 검색 구현.
-            # 불러낸 한 줄이 '조경진,'  을 가지고 있는가?  => in 연산자 활용
             if f'{search_name},' in line:
-                # 검색 이름을 들고 있는 line만 출력
-                
                 infos = line.split(',')
-                
-                # 찾아낸 line이용 => 연락처 상세 보기. (클래스 메쏘드 추가)
                 contact = ContactInfo(infos[0], infos[1], infos[2])
-                
-                # 상세 보기 기능 활용
                 contact.print_contact_info_detail()
                 sleep(2)
