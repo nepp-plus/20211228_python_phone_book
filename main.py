@@ -3,6 +3,8 @@ from phone_book import print_menu, add_phone_num, show_all_phone_num
 from time import sleep
 
 while True:
+    # 전화번호부 기능의 module에서 불러낸 함수를 사용
+    # 메뉴 출력 기능
     num = print_menu()
 
     if num == 0:
