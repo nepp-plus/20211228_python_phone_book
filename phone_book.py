@@ -50,3 +50,12 @@ def remove_all():
     # 안내 메세지 2초간 출력.
     print('모든 연락처가 삭제되었습니다.')
     sleep(2)
+    
+# 상세보기 -> 이름을 기반으로 검색. (전체 연락처 목록에서)
+def search_and_view_contact():
+    print('------ 사용자 검색 ------')
+    search_name = input('조회할 사용자 이름 : ')
+    
+    # 모든 연락처 목록을 불러내야함. => 파일 다시 조회.
+    with open('phone_book.csv', 'r') as file:
+        pass # 모든 연락처를 불러와서 => 이름이 같은게 있는지 찾아보자.
