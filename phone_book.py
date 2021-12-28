@@ -58,4 +58,10 @@ def search_and_view_contact():
     
     # 모든 연락처 목록을 불러내야함. => 파일 다시 조회.
     with open('phone_book.csv', 'r') as file:
-        pass # 모든 연락처를 불러와서 => 이름이 같은게 있는지 찾아보자.
+        line_list = file.readlines()
+        
+        for line in line_list:
+            line = line.strip()
+            
+            # 실제로 해야할것 : 사용자 이름이 정말 들어있는가? 검색 구현.
+            print(line)
