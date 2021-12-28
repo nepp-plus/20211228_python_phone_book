@@ -15,6 +15,8 @@ while True:
     elif num == 3:
         # 새로 추가된 remove_all 함수 실행
         remove_all()
+    elif num == 4:
+        pass # 이름을 입력하면 => 해당 사용자가 있는지 검색 => 있으면 사용자 상세 정보 표기
     else:
         print('잘못된 입력입니다. 다시 입력해주세요.') 
         sleep(2)
