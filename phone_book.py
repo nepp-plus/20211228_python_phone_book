@@ -51,4 +51,11 @@ def show_all_phone_num():
             
             # print(line)  읽은 줄을 그대로 출력 X
             
+            # line은 ,로 붙여진 여러정보 => split으로 분해해서 가공하자.
+            info_list = line.split(',')
+            
             # 연락처 정보를 표현하는 클래스 제작 => (가공해서 출력하는) 기능으로 구현.
+            # 연락처 객체 생성 => 생성자 활용
+            contact = ContactInfo(info_list[0], info_list[1], info_list[2])
+            
+            # 가공해서 출력해주는 기능 활용 => 클래스에 메쏘드 추가
