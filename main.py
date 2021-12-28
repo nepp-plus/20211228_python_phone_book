@@ -1,6 +1,6 @@
 # 다른 모듈에 -> 메뉴 출력, 전화번호 추가 등등의 기능을 함수로 만들자.
 # 해당 함수들을 import 해서 사용하자.
-from phone_book import print_menu, add_phone_num  # 하나의 py 파일에서, 여러 함수 import
+from phone_book import print_menu, add_phone_num, show_all_phone_num  # 하나의 py 파일에서, 여러 함수 import
 
 from time import sleep
 
@@ -21,7 +21,7 @@ while True:
         add_phone_num()
     elif num == 2:
         # 전화번호부 기능 -> 모든 목록 표시.
-        pass
+        show_all_phone_num()
     else:
         # 잘못된 숫자 들어옴. 안내메세지만.
         print('잘못된 입력입니다. 다시 입력해주세요.') # 참고 - 이 문장이 출력되고 나서, 2초정도 대기(!) => 다음 문장.
