@@ -6,6 +6,7 @@ def print_menu():
     print('===== 전화번호부 =====')
     print('1. 전화번호 등록')
     print('2. 전화번호 목록 조회')
+    print('3. 모든 연락처 삭제')
     print('0. 프로그램 종료')
     print('=====================')
     input_num = int( input('메뉴 선택 : ') )
