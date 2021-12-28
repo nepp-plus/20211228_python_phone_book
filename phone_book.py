@@ -45,3 +45,7 @@ def remove_all():
     # 파일을 새로 만들어주자. w 모드로 불러내보자.
     with open('phone_book.csv', 'w') as f:
         pass # w모드로 불러내면 => 기존내용 삭제. 그 뒤의 일은 없다.
+    
+    # 안내 메세지 2초간 출력.
+    print('모든 연락처가 삭제되었습니다.')
+    sleep(2)
