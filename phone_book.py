@@ -67,4 +67,10 @@ def search_and_view_contact():
             # 불러낸 한 줄이 '조경진,'  을 가지고 있는가?  => in 연산자 활용
             if f'{search_name},' in line:
                 # 검색 이름을 들고 있는 line만 출력
-                print(line)
+                
+                infos = line.split(',')
+                
+                # 찾아낸 line이용 => 연락처 상세 보기. (클래스 메쏘드 추가)
+                contact = ContactInfo(infos[0], infos[1], infos[2])
+                
+                contact.print_contact_info()
