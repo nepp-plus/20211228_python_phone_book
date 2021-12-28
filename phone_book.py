@@ -64,4 +64,7 @@ def search_and_view_contact():
             line = line.strip()
             
             # 실제로 해야할것 : 사용자 이름이 정말 들어있는가? 검색 구현.
-            print(line)
+            # 불러낸 한 줄이 '조경진,'  을 가지고 있는가?  => in 연산자 활용
+            if f'{search_name},' in line:
+                # 검색 이름을 들고 있는 line만 출력
+                print(line)
