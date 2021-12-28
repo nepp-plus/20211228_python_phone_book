@@ -59,3 +59,7 @@ def show_all_phone_num():
             contact = ContactInfo(info_list[0], info_list[1], info_list[2])
             
             # 가공해서 출력해주는 기능 활용 => 클래스에 메쏘드 추가
+            contact.print_contact_info()
+            
+        # 2초 대기후 메뉴로
+        sleep(2)
