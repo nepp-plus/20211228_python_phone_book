@@ -83,5 +83,8 @@ def remove_contact_by_position():
         remove_contact = ContactInfo( infos[0], infos[1], infos[2] )
         
         # 이 사람을 삭제하고싶은게 맞는지? 확인받아보자.
+        confirm = input(f'정말 {remove_contact.name} 연락처를 삭제하겠습니까? (y/n) : ')
         
-        
+        # y로 실제 삭제만 코딩
+        if confirm == 'y':
+            pass # 파일의 해당 줄을 삭제.
