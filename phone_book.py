@@ -77,6 +77,11 @@ def remove_contact_by_position():
         # readlines 활용 => 한줄씩 목록으로.
         contact_list = f.readlines()
         # 특정 위치의 연락처만 다뤄보자.
-        target_contact = contact_list[position]
+        target_contact = contact_list[position].strip()  
+        infos = target_contact.split(',')
+        # 연락처 객체로 변환.
+        remove_contact = ContactInfo( infos[0], infos[1], infos[2] )
         
-        print(target_contact)
+        # 이 사람을 삭제하고싶은게 맞는지? 확인받아보자.
+        
+        
