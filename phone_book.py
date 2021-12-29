@@ -79,12 +79,17 @@ def remove_contact_by_position():
         # 특정 위치의 연락처만 다뤄보자.
         target_contact = contact_list[position].strip()  
         infos = target_contact.split(',')
-        # 연락처 객체로 변환.
-        remove_contact = ContactInfo( infos[0], infos[1], infos[2] )
         
-        # 이 사람을 삭제하고싶은게 맞는지? 확인받아보자.
-        confirm = input(f'정말 {remove_contact.name} 연락처를 삭제하겠습니까? (y/n) : ')
+    # 연락처 객체로 변환.
+    remove_contact = ContactInfo( infos[0], infos[1], infos[2] )
+    
+    # 이 사람을 삭제하고싶은게 맞는지? 확인받아보자.
+    confirm = input(f'정말 {remove_contact.name} 연락처를 삭제하겠습니까? (y/n) : ')
+    
+    # y로 실제 삭제만 코딩
+    if confirm == 'y':
         
-        # y로 실제 삭제만 코딩
-        if confirm == 'y':
-            pass # 파일의 해당 줄을 삭제.
+        # 지울 사람만 빼고, 나머지 인원들이 추가되도록 파일을 새로 작성.
+        with open('phone_book.csv', 'w') as f:
+            pass # 새로 파일 내용 구성
+        
