@@ -91,5 +91,16 @@ def remove_contact_by_position():
         
         # 지울 사람만 빼고, 나머지 인원들이 추가되도록 파일을 새로 작성.
         with open('phone_book.csv', 'w') as f:
-            pass # 새로 파일 내용 구성
+            # 읽기 모드에서 가져온 연락처 정보 (이름,폰번,메모) str 을 불러내보자.
+            for line  in contact_list:
+                #  line - '이름,폰번,메모\n'  정보가 들어있을예정.
+                #  remove_contact의 폰번을 => 불러낸 line이 포함하고 있는가? 맞으면 삭제 (추가 X)
+                
+                # 삭제할 대상이 아니어야 => 파일에 내용 추가
+                if  remove_contact.phone_num  not in  line:
+                    f.write(line)  # 가공이 끝난 상태의 str => 그대로 파일의 내용으로 기록.
+                    
+        # 삭제 완료 안내 2초간
+        print('해당 연락처는 삭제되었습니다.')
+        sleep(2)
         
