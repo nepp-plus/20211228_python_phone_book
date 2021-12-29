@@ -76,6 +76,13 @@ def remove_contact_by_position():
     with open('phone_book.csv', 'r') as f:
         # readlines 활용 => 한줄씩 목록으로.
         contact_list = f.readlines()
+        
+        # 범위를 벗어나는 위치 => 해당 위치의 연락처는 없습니다. 메뉴로 돌아가게.
+        if position >=  len( contact_list ) or  position < 0 :
+            print('해당 위치의 연락처는 없습니다.')
+            # 연락처 삭제 기능 (함수 or 메쏘드) 강제 종료.
+            return  # 이 함수의 결과가 여기서 나온다고 지정. => 밑의 코드들은 실행되지 않게 처리.
+        
         # 특정 위치의 연락처만 다뤄보자.
         target_contact = contact_list[position].strip()  
         infos = target_contact.split(',')
